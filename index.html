@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayPal账号注册工具 | AccountAI - 智能开通全球PayPal收款账号，价格透明</title>
+  <meta name="description" content="AccountAI提供AI驱动的PayPal账号注册服务，支持全球PayPal收款账号快速开通！了解PayPal账号购买价格，解决跨境电商收款难题，注册成功率高达90%，支持秒提现，安全可靠。">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    .font-noto {
+      font-family: "Noto Sans SC", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+    .font-noto-900 {
+      font-family: "Noto Sans SC", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+    .floating-nav {
+      position: fixed; /* 固定定位 */
+      top: 50%; /* 距离顶部50% */
+      right: 20px; /* 距离右侧20px */
+      transform: translateY(-50%); /* 垂直居中 */
+      background-color: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+      padding: 15px;
+      border-radius: 8px; /* 圆角 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+      z-index: 1000; /* 确保层级高于其他元素 */
+    }
+
+    .floating-nav ul {
+      list-style: none; /* 去掉列表样式 */
+      margin: 0;
+      padding: 0;
+    }
+
+    .floating-nav ul li {
+      margin-bottom: 10px; /* 每个链接之间的间距 */
+    }
+
+    .floating-nav ul li a {
+      text-decoration: none; /* 去掉下划线 */
+      color: #333; /* 链接颜色 */
+      font-size: 14px; /* 字体大小 */
+      transition: color 0.3s ease; /* 颜色过渡效果 */
+    }
+
+    .floating-nav ul li a:hover {
+      color: #007bff; /* 鼠标悬停时的颜色 */
+    }
+
+    /* 自定义动画 */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-noto">
+
+  <!-- 顶部公告条 -->
+  <div id="top" class="bg-red-600 text-white text-center py-2 px-4">
+    <p class="text-sm">智能赋能，跨境无忧！</p>
+  </div>
+
+  <!-- 导航栏 -->
+  <nav class="bg-white shadow-md py-4 px-6">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- LOGO -->
+      <a href="/" class="flex items-center">
+        <img src="./assets/images/app2.png" alt="AccountAI Logo" class="h-8 mr-2">
+        <span class="text-xl font-bold text-blue-600">AccountAI</span>
+      </a>
+      <!-- 导航链接 -->
+      <ul class="flex space-x-6">
+        <li><a href="#liangdian" class="text-gray-700 hover:text-blue-600 transition duration-300">功能亮点</a></li>
+        <li><a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition duration-300">用户评价</a></li>
+        <li><a href="#pricing" class="text-gray-700 hover:text-blue-600 transition duration-300">价格</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-4 relative overflow-hidden">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold mb-4 fade-in">用科技简化操作，用智慧赢得未来</h1>
+      <p class="text-lg mb-8 fade-in">告别繁琐流程，让AI为您轻松搞定跨境电商收款账号注册。高效、精准、安全，助您快速开启全球生意新篇章！</p>
+      <a href="#" class="bg-white text-blue-600 px-6 py-3 rounded-full hover:bg-gray-200 transition duration-300 fade-in">立即体验→</a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section id="liangdian" class="py-20 px-4 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12 fade-in">为什么选择 AccountAI？</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-gradient-to-b from-blue-100 to-white p-6 rounded-lg shadow-md fade-in">
+          <img src="./assets/images/ai1.png" alt="PayPal智能注册" class="mx-auto mb-4">
+          <h3 class="text-xl font-semibold mt-4">PayPal智能注册</h3>
+          <p class="text-gray-600 mt-2">AI驱动的PayPal账号自动化注册流程，覆盖全球200+国家，注册成功率达90%</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-gradient-to-b from-green-100 to-white p-6 rounded-lg shadow-md fade-in">
+          <img src="./assets/images/maps.png" alt="全球收款" class="mx-auto mb-4">
+          <h3 class="text-xl font-semibold mt-4">全球收款</h3>
+          <p class="text-gray-600 mt-2">支持全球所有Paypal覆盖的国家</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-gradient-to-b from-red-100 to-white p-6 rounded-lg shadow-md fade-in">
+          <img src="./assets/images/tixian.png" alt="收款秒提" class="mx-auto mb-4">
+          <h3 class="text-xl font-semibold mt-4">收款秒提</h3>
+          <p class="text-gray-600 mt-2">基于我们独特的AI技术驱动，收款后可以直接提现，不需要再等待多余的审核</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 px-4 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12 fade-in">用户评价</h2>
+      <!-- 用户评价滑动容器 -->
+      <div class="relative overflow-hidden">
+        <!-- 左右按钮 -->
+        <button id="left-button" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-600 p-2 rounded-full shadow-md z-10 hover:bg-gray-200 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button id="right-button" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-600 p-2 rounded-full shadow-md z-10 hover:bg-gray-200 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+        <!-- 滑动内容 -->
+        <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-slider">
+          <!-- Testimonial 1 -->
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“AccountAI帮我在3天内完成了所有收款账户的注册，效率惊人！”</p>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“再也不用担心复杂的注册流程了，AI真的太智能了！”</p>
+            </div>
+          </div>
+          <!-- 新增评价 -->
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“服务非常专业，团队响应速度很快，值得信赖！”</p>
+            </div>
+          </div>
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“界面简洁易用，功能强大，推荐给所有跨境卖家！”</p>
+            </div>
+          </div>
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“节省了大量时间，让我可以专注于业务增长。”</p>
+            </div>
+          </div>
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“支持多平台注册，真的很方便！”</p>
+            </div>
+          </div>
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“安全可靠，数据隐私保护得很好！”</p>
+            </div>
+          </div>
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“客服团队非常专业，问题解决得很快！”</p>
+            </div>
+          </div>
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“功能齐全，性价比超高！”</p>
+            </div>
+          </div>
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“帮助我快速打开了国际市场！”</p>
+            </div>
+          </div>
+          <!-- 复制前两条评价以实现无限滚动 -->
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“AccountAI帮我在3天内完成了所有收款账户的注册，效率惊人！”</p>
+            </div>
+          </div>
+          <div class="min-w-1/2 px-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="用户头像" class="avatar mx-auto mb-4">
+              <p class="text-gray-700 italic">“再也不用担心复杂的注册流程了，AI真的太智能了！”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CSS 样式 -->
+  <style>
+    /* 头像样式 */
+    .avatar {
+      width: 80px; /* 固定宽度 */
+      height: 80px; /* 固定高度 */
+      object-fit: cover; /* 保持比例并填充容器 */
+      border-radius: 50%; /* 圆形头像 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    }
+  </style>
+  
+  <!-- JavaScript 实现滑动功能 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slider = document.getElementById('testimonial-slider');
+      const leftButton = document.getElementById('left-button');
+      const rightButton = document.getElementById('right-button');
+  
+      if (!slider || !leftButton || !rightButton) {
+        console.error('Required elements are missing in the DOM.');
+        return;
+      }
+  
+      let currentIndex = 0;
+  
+      // 手动滑动逻辑
+      function slide(direction) {
+        if (direction === 'left') {
+          currentIndex--;
+          if (currentIndex < 0) {
+            // 如果滚动到开头，则无缝切换到最后一条评价
+            slider.style.transition = 'none';
+            currentIndex = 9; // 假设有10条原始评价
+            slider.style.transform = `translateX(-${currentIndex * 50}%)`;
+            setTimeout(() => {
+              slider.style.transition = 'transform 0.5s ease-in-out';
+            }, 50);
+          } else {
+            slider.style.transform = `translateX(-${currentIndex * 50}%)`;
+          }
+        } else if (direction === 'right') {
+          currentIndex++;
+          if (currentIndex >= 10) {
+            // 如果滚动到末尾，则无缝切换回第一条评价
+            slider.style.transition = 'none';
+            currentIndex = 0;
+            slider.style.transform = `translateX(0)`;
+            setTimeout(() => {
+              slider.style.transition = 'transform 0.5s ease-in-out';
+            }, 50);
+          } else {
+            slider.style.transform = `translateX(-${currentIndex * 50}%)`;
+          }
+        }
+      }
+  
+      // 绑定按钮点击事件
+      leftButton.addEventListener('click', () => slide('left'));
+      rightButton.addEventListener('click', () => slide('right'));
+  
+      // 自动滚动（可选）
+      setInterval(() => slide('right'), 5000);
+    });
+  </script>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20 px-4">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-12 fade-in">价格</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white text-green-600 p-8 rounded-lg shadow-xl border-4 border-green-500 transform hover:scale-105 transition duration-300 ease-in-out fade-in">
+          <h3 class="text-2xl font-semibold mb-4">PayPal账号购买（按账号）</h3>
+          <p class="text-gray-600 mb-6">了解PayPal账号多少钱？最小起购量10个，50个以上享优惠价！</p>
+          <p class="text-4xl font-bold mb-4">¥200<span class="text-base font-normal">/个</span></p>
+          <h4 class="text-lg font-semibold mb-2">优点：</h4>
+          <ul class="text-left text-gray-700 mb-4">
+            <li class="mb-2">✔️ 七天首登支持</li>
+            <li class="mb-2">✔️ 支持期内免费更换</li>
+          </ul>
+          <h4 class="text-lg font-semibold mb-2">缺点：</h4>
+          <ul class="text-left text-gray-700 mb-6">
+            <li class="mb-2">❌ 不适合大需求场景</li>
+            <li class="mb-2">❌ 无收款轮询系统支持</li>
+            <li class="mb-2">❌ 无广告流量技术支持</li>
+            <li class="mb-2">❌ 无长期技术支持</li>
+          </ul>
+          <a href="#" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition duration-300">联系我们 →</a>
+        </div>
+        
+        <div class="bg-white text-blue-600 p-8 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out fade-in">
+          <h3 class="text-2xl font-semibold mb-4">按随机国家购买</h3>
+          <p class="text-gray-600 mb-6">最小起定量：3个国家</p>
+          <p class="text-4xl font-bold mb-4">¥1000<span class="text-base font-normal">/个国家/月</span></p>
+          <h4 class="text-lg font-semibold mb-2">优点：</h4>
+          <ul class="text-left text-gray-700 mb-4">
+            <li class="mb-2">✔️ 在大需求场景下自主可控</li>
+            <li class="mb-2">✔️ 在大需求场景下成本可控</li>
+            <li class="mb-2">✔️ 优先客服响应</li>
+            <li class="mb-2">✔️ 服务期内技术支持</li>
+          </ul>
+          <h4 class="text-lg font-semibold mb-2">缺点：</h4>
+          <ul class="text-left text-gray-700 mb-6">
+            <li class="mb-2">❌ 无法指定想要的国家收款账号</li>
+            <li class="mb-2">❌ 无收款轮询系统支持</li>
+            <li class="mb-2">❌ 无广告流量技术支持</li>
+          </ul>
+          <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">联系我们 →</a>
+        </div>
+
+        <div class="bg-white text-amber-600 p-8 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out fade-in">
+          <h3 class="text-2xl font-semibold mb-4">按固定国家购买</h3>
+          <p class="text-gray-600 mb-6">最小起定量：3个国家</p>
+          <p class="text-4xl font-bold mb-4">¥1500<span class="text-base font-normal">/个国家/月</span></p>
+          <h4 class="text-lg font-semibold mb-2">优点：</h4>
+          <ul class="text-left text-gray-700 mb-4">
+            <li class="mb-2">✔️ 在大需求场景下自主可控</li>
+            <li class="mb-2">✔️ 在大需求场景下成本可控</li>
+            <li class="mb-2">✔️ 优先客服响应</li>
+            <li class="mb-2">✔️ 服务期内技术支持</li>
+            <li class="mb-2">✔️ 在我们已有的服务国家区域内可指定想要的国家收款账号</li>
+          </ul>
+          <h4 class="text-lg font-semibold mb-2">缺点：</h4>
+          <ul class="text-left text-gray-700 mb-6">
+            <li class="mb-2">❌ 无收款轮询系统支持</li>
+            <li class="mb-2">❌ 无广告流量技术支持</li>
+          </ul>
+          <a href="#" class="bg-amber-600 text-white px-6 py-3 rounded-full hover:bg-amber-700 transition duration-300">联系我们 →</a>
+        </div>
+  
+        <!-- Enterprise Plan -->
+        <div class="bg-white text-red-600 p-8 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out fade-in">
+          <h3 class="text-2xl font-semibold mb-4">旗舰版</h3>
+          <p class="text-gray-600 mb-6">专为团队/企业定制化设计的解决方案</p>
+          <p class="text-4xl font-bold mb-4">洽谈定价</p>
+          <ul class="text-left text-gray-700 mb-4">
+            <li class="mb-2">✔️ 已有的服务国家区域完全开放</li>
+            <li class="mb-2">✔️ 新的收款国家快速响应支持</li>
+            <li class="mb-2">✔️ 收款轮询系统支持</li>
+            <li class="mb-2">✔️ 广告流量支持</li>
+            <li class="mb-2">✔️ 优先客服响应</li>
+            <li class="mb-2">✔️ 服务期内长期技术支持</li>
+          </ul>
+          <a href="#" class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition duration-300">联系我们 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-100 py-12 px-4">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-bold mb-6">常见问题</h2>
+      <div class="text-left space-y-4">
+        <div>
+          <h3 class="font-semibold">PayPal账号注册需要多久？</h3>
+          <p class="text-gray-600">通过AI自动化流程，3天内即可完成账号注册并投入使用。</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">PayPal账号购买价格是否透明？</h3>
+          <p class="text-gray-600">我们提供公开的阶梯定价，支持按账号、国家或企业定制方案，无隐藏费用。</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">你们使用什么AI工具赋能？</h3>
+          <p class="text-gray-600">我们支持使用我们自主开发的联网AI模型、豆包、ChatGPT、Claude、Gemini等主流AI。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white py-10 px-4">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">&copy; 2025 AccountAI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 添加对话框HTML -->
+  <div id="contactModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden z-[2000]">
+    <div class="bg-white p-8 rounded-lg max-w-md mx-auto mt-20 relative">
+      <button id="closeModal" class="absolute top-2 right-2 text-gray-600 hover:text-red-600">×</button>
+      <div class="text-center">
+        <h3 class="text-2xl font-bold mb-4">扫码联系AccountAI</h3>
+        <img src="./assets/images/wechat.png" alt="扫码联系AccountAI" class="w-48 h-48 mx-auto mb-4">
+        <div class="space-y-2 text-gray-700">
+          <p>微信: iRedux</p>
+          <p>QQ: 14681797</p>
+          <p>邮箱: iado@foxmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* 对话框样式 */
+    #contactModal {
+      transition: opacity 0.3s ease;
+    }
+    #contactModal div {
+      animation: modalSlide 0.3s ease-out;
+    }
+    @keyframes modalSlide {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+
+  <script>
+    // 添加对话框控制逻辑
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('contactModal');
+      const closeBtn = document.getElementById('closeModal');
+      
+      // 为所有需要触发的按钮添加点击事件
+      document.querySelectorAll('a[href="#"]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          modal.classList.remove('hidden');
+        });
+      });
+
+      // 关闭对话框
+      closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+      modal.addEventListener('click', (e) => {
+        if(e.target === modal) modal.classList.add('hidden');
+      });
+    });
+  </script>
+
+  <div class="floating-nav">
+    <ul>
+      <li><a href="#top">回到顶部</a></li>
+      <li><a href="#liangdian">功能亮点</a></li>
+      <li><a href="#testimonials">用户评价</a></li>
+      <li><a href="#pricing">价格</a></li>
+    </ul>
+  </div>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "PayPal账号注册工具",
+      "description": "AI驱动的PayPal账号自动化注册服务，支持全球收款账号开通。",
+      "brand": "AccountAI",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "200",
+        "highPrice": "1500",
+        "priceCurrency": "CNY"
+      }
+    }
+    </script>
+
+</body>
+</html>
